@@ -69,13 +69,8 @@ function registrarContacto($datos){
 
     $sth = DataBase::getInstance()->prepare("INSERT INTO contacto(correo, descripcion) VALUES ('$correo', '$descripcion')");
 
-    if($sth->execute()){
-        echo "ok";
-    }else{
-        echo "false";
-    }
+    $sth->execute();
     
-
 }
 
 function listarTiposP(){
